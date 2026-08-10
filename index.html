@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Unnati Charitable Trust | Serving Humanity in Jammu</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#057740;--g2:#10d187;--g3:#e8f5ec;--s:#d4620a;--s2:#fff0e6;--cr:#fdf9f4;--dk:#181818;--tx:#3a3a3a;--mu:#777;--br:#e5e0d8;--wh:#fff;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:var(--dk);background:var(--wh);}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,.97);border-bottom:1px solid var(--br);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:66px;backdrop-filter:blur(10px);}
+.logo{display:flex;align-items:center;gap:15px;text-decoration:none;}
+.lmark{width:38px;height:38px;background:var(--g);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:17px;}
+.lname{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--g);}
+.lsub{font-size:10px;color:var(--mu);font-family:'DM Sans',sans-serif;display:block;margin-top:-3px;}
+.nl{display:flex;align-items:center;gap:4px;}
+.nl a{text-decoration:none;color:var(--tx);font-size:13.5px;font-weight:500;padding:6px 11px;border-radius:7px;transition:.2s;}
+.nl a:hover{background:var(--g3);color:var(--g);}
+.ncta{background:var(--s)!important;color:#fff!important;border-radius:8px!important;font-weight:600!important;}
+.ncta:hover{background:#b8520a!important;}
+.nadm{color:var(--g)!important;font-weight:600!important;}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+.burger span{width:22px;height:2px;background:var(--dk);border-radius:2px;display:block;}
+.mm{display:none;position:fixed;top:66px;left:0;right:0;background:#fff;border-bottom:1px solid var(--br);padding:14px 5%;flex-direction:column;gap:3px;z-index:998;}
+.mm.open{display:flex;}
+.mm a{text-decoration:none;color:var(--tx);font-size:15px;padding:10px 12px;border-radius:7px;font-weight:500;}
+.mm a:hover{background:var(--g3);color:var(--g);}
+/* HERO */
+.hero{min-height:100vh;background:linear-gradient(135deg,#64ade9 0%,#f03c6f 55%,#074822 100%);display:flex;align-items:center;padding:90px 5% 60px;position:relative;overflow:hidden;}
+.hdots{position:absolute;inset:0;opacity:.05;background-image:radial-gradient(circle at 2px 2px,#fff 1px,transparent 0);background-size:30px 30px;}
+.hring{position:absolute;right:-60px;bottom:-80px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);}
+.hring2{position:absolute;right:120px;top:-100px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);}
+.hcont{max-width:640px;position:relative;z-index:1;}
+.hpill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 15px;border-radius:50px;font-size:12.5px;font-weight:500;margin-bottom:22px;}
+.hdot{width:7px;height:7px;background:#7effa8;border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(34px,5vw,58px);color:#fff;line-height:1.13;margin-bottom:18px;}
+.hero h1 em{color:#7effa8;font-style:normal;}
+.hero p{color:rgba(255,255,255,.82);font-size:16.5px;line-height:1.75;margin-bottom:34px;font-weight:300;}
+.hbtns{display:flex;gap:13px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:10px;font-weight:600;font-size:14px;text-decoration:none;transition:.25s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.bts{background:var(--s);color:#fff;}.bts:hover{background:#b8520a;transform:translateY(-2px);}
+.btg{background:var(--g);color:#fff;}.btg:hover{background:#0f4226;transform:translateY(-2px);}
+.btgh{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45);}.btgh:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+/* STATS */
+.swrap{background:#fff;border-bottom:1px solid var(--br);padding:50px 5%;}
+.sh{text-align:center;margin-bottom:34px;}.sh h2{font-size:25px;}.sh p{color:var(--mu);font-size:13.5px;margin-top:5px;}
+.srow{display:grid;grid-template-columns:repeat(4,1fr);max-width:860px;margin:0 auto;}
+.sb{text-align:center;padding:20px 12px;border-right:1px solid var(--br);}.sb:last-child{border-right:none;}
+.sn{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--g);line-height:1;margin-bottom:6px;}
+.sl{font-size:11.5px;color:var(--mu);text-transform:uppercase;letter-spacing:.8px;font-weight:500;}
+/* SECTIONS */
+section{padding:76px 5%;}
+.stag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--g2);margin-bottom:8px;}
+.stit{font-size:clamp(25px,3.5vw,37px);color:var(--dk);line-height:1.22;margin-bottom:12px;}
+.ssub{color:var(--mu);font-size:15px;line-height:1.72;max-width:560px;}
+.shd{margin-bottom:46px;}
+/* ACTIVITIES */
+#activities{background:var(--cr);}
+.agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.acard{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--br);transition:.3s;}
+.acard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.08);}
+.aimg{height:190px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;font-size:54px;}
+.aimg img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.aef{position:relative;z-index:1;}
+.atag{position:absolute;top:12px;left:12px;background:var(--g);color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:50px;letter-spacing:.8px;text-transform:uppercase;z-index:2;}
+.abody{padding:17px 19px 21px;}
+.abody h3{font-size:16.5px;margin-bottom:8px;}
+.ameta{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:11px;}
+.ameta span{font-size:11px;color:var(--mu);background:#f5f3ee;padding:3px 8px;border-radius:50px;}
+.aimp{font-size:13px;font-weight:600;color:var(--g2);}
+/* PROGRAMS */
+#programs{background:#fff;}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.pcard{padding:24px 26px;border-radius:14px;border:1px solid var(--br);display:flex;gap:16px;align-items:flex-start;transition:.3s;}
+.pcard:hover{border-color:var(--g2);background:var(--g3);}
+.pic{width:48px;height:48px;border-radius:11px;background:var(--g3);display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0;transition:.3s;}
+.pcard:hover .pic{background:#fff;}
+.pcard h3{font-size:16px;margin-bottom:6px;}.pcard p{font-size:13px;color:var(--mu);line-height:1.6;}
+/* UPCOMING */
+#upcoming{background:var(--cr);}
+.ulist{display:flex;flex-direction:column;gap:12px;}
+.uitem{background:#fff;border-radius:13px;padding:18px 22px;display:flex;align-items:center;gap:20px;border:1px solid var(--br);transition:.3s;flex-wrap:wrap;}
+.uitem:hover{border-color:var(--s);box-shadow:0 7px 24px rgba(212,98,10,.07);}
+.udate{background:var(--s);color:#fff;border-radius:9px;padding:8px 12px;text-align:center;min-width:56px;flex-shrink:0;}
+.udd{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;line-height:1;}
+.umm{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;opacity:.9;margin-top:3px;}
+.uinfo h3{font-size:15.5px;margin-bottom:4px;}.uinfo p{font-size:12px;color:var(--mu);}
+.utag{margin-left:auto;background:var(--s2);color:var(--s);font-size:10px;font-weight:700;padding:4px 10px;border-radius:50px;text-transform:uppercase;flex-shrink:0;}
+/* GALLERY */
+#gallery{background:#fff;}
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.gi{border-radius:13px;overflow:hidden;aspect-ratio:1;position:relative;cursor:pointer;background:var(--g3);}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.gi:hover img{transform:scale(1.08);}
+.gem{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:44px;transition:transform .4s;}
+.gi:hover .gem{transform:scale(1.1);}
+.gov{position:absolute;inset:0;background:rgba(21,93,52,.72);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:12.5px;opacity:0;transition:opacity .3s;text-align:center;padding:8px;}
+.gi:hover .gov{opacity:1;}
+.gi.tall{grid-row:span 2;}
+/* VOLUNTEER */
+#volunteer{background:var(--cr);}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;}
+.vform{background:#fff;border-radius:18px;padding:32px 36px;border:1px solid var(--br);}
+.vform h3{font-size:20px;margin-bottom:4px;}.vsub{color:var(--mu);font-size:13px;margin-bottom:24px;}
+.fg{margin-bottom:14px;}.fg label{display:block;font-size:12px;font-weight:500;color:var(--tx);margin-bottom:5px;}
+.fg input,.fg select,.fg textarea{width:100%;padding:9px 12px;border:1px solid var(--br);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13.5px;color:var(--dk);outline:none;transition:border-color .2s;background:#fff;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--g2);}
+.fg textarea{resize:vertical;min-height:84px;}
+.fgrow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.bsub{background:var(--g);color:#fff;border:none;padding:12px 24px;border-radius:9px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;width:100%;transition:.25s;}
+.bsub:hover{background:#0f4226;}
+.sbox{display:none;background:#e8f5ec;border:1px solid #2d9e5f;color:var(--g);padding:10px 13px;border-radius:8px;font-size:13px;font-weight:500;margin-top:10px;text-align:center;}
+.vinfo .stit{font-size:32px;}.vinfo>p{color:var(--mu);font-size:14.5px;line-height:1.75;margin-bottom:24px;}
+.blist{display:flex;flex-direction:column;gap:13px;}
+.ben{display:flex;gap:12px;align-items:flex-start;}
+.bic{width:38px;height:38px;background:var(--g3);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.ben h4{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;margin-bottom:2px;}.ben p{font-size:12.5px;color:var(--mu);}
+/* DONATE */
+#donate{background:linear-gradient(135deg,#0a3d20,#155d34);padding:76px 5%;}
+.dinn{max-width:760px;margin:0 auto;text-align:center;}
+#donate .stag{color:#7effa8;}#donate .stit{color:#fff;}
+#donate .ssub{color:rgba(255,255,255,.78);margin:0 auto 34px;}
+.arow{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-bottom:22px;}
+.abtn{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.28);padding:10px 20px;border-radius:9px;font-size:14.5px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:.25s;}
+.abtn:hover,.abtn.active{background:var(--s);border-color:var(--s);}
+.dcust{display:flex;gap:10px;max-width:370px;margin:0 auto 24px;}
+.dcust input{flex:1;padding:11px 14px;border-radius:9px;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;}
+.dcust input::placeholder{color:rgba(255,255,255,.45);}
+.dnote{color:rgba(255,255,255,.48);font-size:12px;margin-top:13px;}
+/* ABOUT */
+#about{background:#fff;}
+.abgrid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+.abvis{background:var(--g3);border-radius:22px;padding:40px 32px;text-align:center;}
+.abvis .big{font-size:68px;margin-bottom:14px;}.abvis h3{font-size:19px;color:var(--g);margin-bottom:9px;}
+.abvis p{font-size:13px;color:var(--mu);line-height:1.65;margin-bottom:18px;}
+.vgrd{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.vtag{background:#fff;border-radius:8px;padding:9px 12px;font-size:12px;font-weight:600;color:var(--g);border:1px solid var(--br);}
+.abtx .stit{font-size:32px;}.abtx p{color:var(--mu);font-size:14px;line-height:1.8;margin-bottom:13px;}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:22px;}
+.tc{text-align:center;padding:14px 9px;background:var(--cr);border-radius:11px;}
+.tav{width:48px;height:48px;background:var(--g);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:18px;font-weight:700;margin:0 auto 8px;}
+.tc h4{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;}.tc p{font-size:10.5px;color:var(--mu);}
+/* CONTACT */
+#contact{background:var(--cr);}
+.cgrid{display:grid;grid-template-columns:1fr 1.5fr;gap:44px;}
+.cinfo p{color:var(--mu);font-size:14px;line-height:1.75;margin-bottom:26px;}
+.citem{display:flex;gap:12px;align-items:flex-start;margin-bottom:18px;}
+.cic{width:40px;height:40px;background:var(--g3);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.citem h4{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:var(--mu);margin-bottom:2px;}
+.citem p{font-size:14px;color:var(--dk);font-weight:500;}
+.cform{background:#fff;border-radius:18px;padding:32px 36px;border:1px solid var(--br);}
+.cform h3{font-size:19px;margin-bottom:18px;}
+.cta-strip{background:var(--s);padding:54px 5%;text-align:center;}
+.cta-strip h2{color:#fff;font-size:30px;margin-bottom:8px;}.cta-strip p{color:rgba(255,255,255,.85);font-size:15px;margin-bottom:26px;}
+.ctabtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.bwh{background:#fff;color:var(--s);padding:11px 24px;border-radius:9px;text-decoration:none;font-weight:700;font-size:14px;transition:.25s;}
+.bwh:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(0,0,0,.12);}
+.bwho{background:transparent;color:#fff;padding:11px 24px;border-radius:9px;text-decoration:none;font-weight:600;font-size:14px;border:2px solid rgba(255,255,255,.5);transition:.25s;}
+.bwho:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+footer{background:#0a1f10;color:rgba(255,255,255,.6);padding:52px 5% 26px;}
+.ftg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;margin-bottom:40px;}
+.ftb p{font-size:13px;line-height:1.7;color:rgba(255,255,255,.45);margin-top:12px;}
+.ftsoc{display:flex;gap:8px;margin-top:15px;}
+.fts{width:32px;height:32px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;transition:background .2s;border:1px solid rgba(255,255,255,.08);color:#fff;text-decoration:none;}
+.fts:hover{background:var(--g2);}
+.ftc h4{color:#fff;font-family:'DM Sans',sans-serif;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:13px;}
+.ftc a{display:block;color:rgba(255,255,255,.45);font-size:13px;text-decoration:none;margin-bottom:8px;transition:color .2s;}
+.ftc a:hover{color:#7effa8;}.ftc p{font-size:13px;margin-bottom:7px;}
+.ftbot{border-top:1px solid rgba(255,255,255,.07);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:7px;}
+.ftbot p{font-size:12px;color:rgba(255,255,255,.32);}
+@media(max-width:900px){
+  .nl{display:none;}.burger{display:flex;}
+  .agrid,.pgrid,.abgrid,.vgrid,.cgrid{grid-template-columns:1fr;}
+  .srow{grid-template-columns:1fr 1fr;}
+  .sb:nth-child(2){border-right:none;}.sb:nth-child(3){border-right:1px solid var(--br);border-top:1px solid var(--br);}.sb:nth-child(4){border-right:none;border-top:1px solid var(--br);}
+  .ggrid{grid-template-columns:1fr 1fr;}.gi:nth-child(2){grid-row:span 1;}
+  .tgrid{grid-template-columns:1fr 1fr;}.fgrow{grid-template-columns:1fr;}
+  .vform,.cform{padding:24px 20px;}.ftg{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:520px){.hero h1{font-size:32px;}.ftg{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#home">
+    <img src="logo.png" alt="Unnati Charitable Trust Logo" class="logo-img">
+    <div><span class="lname">Unnati Charitable Trust</span><span class="lsub">Jammu &amp; Kashmir</span></div>
+  </a>
+  <div class="nl">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#programs">Programs</a>
+    <a href="#gallery">Gallery</a><a href="#volunteer">Volunteer</a><a href="#donate">Donate</a>
+    <a href="#contact">Contact</a>
+    <a href="#donate" class="ncta">Donate Now</a>
+  </div>
+  <div class="burger" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+<div class="mm" id="mm">
+  <a href="#home" onclick="this.closest('.mm').classList.remove('open')">Home</a>
+  <a href="#about" onclick="this.closest('.mm').classList.remove('open')">About</a>
+  <a href="#programs" onclick="this.closest('.mm').classList.remove('open')">Programs</a>
+  <a href="#gallery" onclick="this.closest('.mm').classList.remove('open')">Gallery</a>
+  <a href="#volunteer" onclick="this.closest('.mm').classList.remove('open')">Volunteer</a>
+  <a href="#donate" onclick="this.closest('.mm').classList.remove('open')">Donate</a>
+  <a href="#contact" onclick="this.closest('.mm').classList.remove('open')">Contact</a>
+  <a href="admin.html" style="color:var(--g);font-weight:600;">⚙ Admin Panel</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hdots"></div><div class="hring"></div><div class="hring2"></div>
+  <div class="hcont">
+    <div class="hpill"><span class="hdot"></span> Serving Jammu Since 2019</div>
+    <h1>Serving Humanity,<br><em>Empowering Youth</em><br>in Jammu</h1>
+    <p>Unnati Charitable Trust is a youth-led movement in Jammu committed to creating real change through food drives, Education Support, clothing donations, and community outreach across Jammu &amp; Kashmir.</p>
+    <div class="hbtns">
+      <a href="#donate" class="btn bts">❤ Donate Now</a>
+      <a href="#volunteer" class="btn btgh">✋ Join as Volunteer</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="swrap">
+  <div class="sh"><h2>Impact at a Glance</h2><p>Real numbers, real impact. Every contribution makes a difference.</p></div>
+  <div class="srow">
+    <div class="sb"><div class="sn">10,000+</div><div class="sl">Meals Served</div></div>
+    <div class="sb"><div class="sn">5,000+</div><div class="sl">Clothes Distributed</div></div>
+    <div class="sb"><div class="sn">2,500+</div><div class="sl">Students Helped</div></div>
+    <div class="sb"><div class="sn">100+</div><div class="sl">Drives Completed</div></div>
+  </div>
+</div>
+
+<!-- ACTIVITIES -->
+<section id="activities">
+  <div class="shd"><div class="stag">Recent Activities</div><h2 class="stit">See What We've Been Up To</h2><p class="ssub">Real stories from our recent drives and initiatives making a difference in Jammu.</p></div>
+  <div class="agrid" id="actGrid"></div>
+  <div style="text-align:center;margin-top:32px;"><a href="#programs" class="btn btg">View All Programs →</a></div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <div class="shd"><div class="stag">Our Programs</div><h2 class="stit">Focused Initiatives for Real Change</h2><p class="ssub">Making a difference through programs that address real needs in Jammu &amp; Kashmir.</p></div>
+  <div class="pgrid">
+    <div class="pcard"><div class="pic">🍲</div><div><h3>Food Donation Drives</h3><p>Regular meal distribution for daily wage workers and underprivileged families. Serving 600+ plates at recent drives in Jammu city.</p></div></div>
+    <div class="pcard"><div class="pic">🧥</div><div><h3>Clothing Donation Drives</h3><p>Collecting and distributing winter clothes, blankets, and essentials for families in need across Jammu's coldest months.</p></div></div>
+    <div class="pcard"><div class="pic">📖</div><div><h3>Education Support &amp; Student Aid</h3><p>Providing books, notebooks, and school materials to underprivileged students, especially in flood-affected zones of J&amp;K.</p></div></div>
+    <div class="pcard"><div class="pic">🎉</div><div><h3>Special Campaigns &amp; Events</h3><p>Children's Day celebrations, flood relief, blood donation drives, health camps, and emergency aid when communities need us most.</p></div></div>
+  </div>
+</section>
+
+<!-- UPCOMING -->
+<section id="upcoming">
+  <div class="shd"><div class="stag">Upcoming Drives</div><h2 class="stit">Join Our Next Initiative</h2><p class="ssub">Be part of something meaningful. Sign up to volunteer at our upcoming drives in Jammu.</p></div>
+  <div class="ulist">
+    <div class="uitem"><div class="udate"><div class="udd">09</div><div class="umm">Aug</div></div><div class="uinfo"><h3>Food Drive </h3><p>📍 Katra&nbsp;|&nbsp;  500+ Meals</p></div><span class="utag">Food</span><a href="#volunteer" class="btn bts" style="font-size:12.5px;padding:9px 16px;margin-left:12px;">Join Us</a></div>
+    <div class="uitem"><div class="udate"><div class="udd">01</div><div class="umm">Oct</div></div><div class="uinfo"><h3>Summer Meal Distribution Drive</h3><p>📍 Railway Station, Jammu &nbsp;|&nbsp; 🍱 600+ Trees</p></div><span class="utag">Environment</span><a href="#volunteer" class="btn bts" style="font-size:12.5px;padding:9px 16px;margin-left:12px;">Join Us</a></div>
+    <div class="uitem"><div class="udate"><div class="udd">15</div><div class="umm">Nov</div></div><div class="uinfo"><h3>Annual Education Kit Distribution</h3><p>📍 Govt. Schools, Jammu &nbsp;|&nbsp; 📚 300+ student kits</p></div><span class="utag">EDUCATION</span><a href="#volunteer" class="btn bts" style="font-size:12.5px;padding:9px 16px;margin-left:12px;">Join Us</a></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="shd"><div class="stag">Gallery</div><h2 class="stit">Moments That Matter</h2><p class="ssub">A glimpse into our drives, events, and the smiles we've had the privilege of creating.</p></div>
+  <div class="ggrid" id="galGrid"></div>
+  <div style="text-align:center;margin-top:20px;"><p style="color:var(--mu);font-size:13px;">Follow us <a href="#" style="color:var(--s);font-weight:600;">@Unnatingo_jammu</a> on Instagram</p></div>
+</section>
+
+<!-- VOLUNTEER -->
+<section id="volunteer">
+  <div class="vgrid">
+    <div class="vinfo">
+      <div class="stag">Volunteer</div><h2 class="stit">Be the Change You Wish to See</h2>
+      <p>Join our growing family of passionate volunteers. Whether you have a few hours or a full day, your effort creates real impact in Jammu &amp; Kashmir.</p>
+      <div class="blist">
+        <div class="ben"><div class="bic">💪</div><div><h4>Make Real Impact</h4><p>Your time directly helps families, students, and communities in need.</p></div></div>
+        <div class="ben"><div class="bic">🌐</div><div><h4>Build Your Network</h4><p>Connect with like-minded people who care about a better society.</p></div></div>
+        <div class="ben"><div class="bic">📜</div><div><h4>Get Certified</h4><p>Receive an official volunteer certificate recognizing your contribution.</p></div></div>
+        <div class="ben"><div class="bic">✨</div><div><h4>Grow Personally</h4><p>Develop leadership, empathy, and teamwork through every drive.</p></div></div>
+      </div>
+    </div>
+    <div class="vform">
+      <h3>Register as Volunteer</h3><p class="vsub">Fill in your details and we'll reach out for upcoming drives.</p>
+      <div class="fgrow"><div class="fg"><label>Full Name *</label><input type="text" id="vn" placeholder="Your Name"></div><div class="fg"><label>Mobile *</label><input type="tel" id="vp" placeholder="+91 94190 XXXXX"></div></div>
+      <div class="fg"><label>Email</label><input type="email" id="ve" placeholder="your@email.com"></div>
+      <div class="fg"><label>Area / Locality</label><input type="text" id="vc" placeholder="Jammu, J&K"></div>
+      <div class="fg"><label>Area of Interest</label><select id="vi"><option>-- Select --</option><option>Food Drives</option><option>Clothing Drives</option><option>Education Support</option><option>Events &amp; Campaigns</option><option>All of the Above</option></select></div>
+      <div class="fg"><label>Message</label><textarea id="vm" placeholder="Tell us about yourself..."></textarea></div>
+      <button class="bsub" onclick="subVol()">✋ Register as Volunteer</button>
+      <div class="sbox" id="vs">🎉 Thank you! We'll contact you soon for upcoming drives.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section id="donate">
+  <div class="dinn">
+    <div class="stag">Donate</div><h2 class="stit">Your Kindness Feeds a Family</h2>
+    <p class="ssub">Every rupee goes directly to feeding the hungry, clothing the needy, and educating children in Jammu.</p>
+    <div class="arow">
+      <button class="abtn active" onclick="selA(this)">₹100</button><button class="abtn" onclick="selA(this)">₹250</button>
+      <button class="abtn" onclick="selA(this)">₹500</button><button class="abtn" onclick="selA(this)">₹1000</button><button class="abtn" onclick="selA(this)">₹2500</button>
+    </div>
+    <div class="dcust"><input type="number" id="ca" placeholder="Custom amount (₹)"><a href="mailto:unnatingo.jmu@gmail.com?subject=Donation" class="btn bts">Donate Now ❤</a></div>
+    <p class="dnote">unnatingo.jmu@gmail.com &nbsp;|&nbsp; UPI &amp; Bank Transfer available &nbsp;|&nbsp; 80G Tax Exemption</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="abgrid">
+    <div class="abvis"><div class="big">🌱</div><h3>Unnati Charitable Trust — Jammu</h3><p>A youth-led movement rooted in Jammu, working to create tangible change through grassroots community work since 2019.</p>
+      <div class="vgrd"><div class="vtag">💚 Compassion</div><div class="vtag">✊ Action</div><div class="vtag">🤝 Community</div><div class="vtag">🌟 Integrity</div></div>
+    </div>
+    <div class="abtx">
+      <div class="stag">About Us</div><h2 class="stit">Who We Are</h2>
+      <p>Unnati Charitable Trust (meaning "Growth") was born from the belief that every person has the power to create positive change. We are a youth-driven NGO based in Jammu, J&amp;K.</p>
+      <p>Our volunteers come from all walks of life — students, professionals, homemakers — united by one mission: to serve those who need it most. We work at the grassroots level.</p>
+      <p>From busy food drives to quiet school supply distributions, every effort is driven by empathy and community trust built over the years in Jammu.</p>
+      <div class="tgrid">
+        <div class="tc"><div class="tav">A</div><h4>Arjun Sharma</h4><p>Founder &amp; Lead</p></div>
+        <div class="tc"><div class="tav">P</div><h4>Priya Gupta</h4><p>Program Head</p></div>
+        <div class="tc"><div class="tav">R</div><h4>Rohan Dogra</h4><p>Outreach Lead</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="shd"><div class="stag">Contact</div><h2 class="stit">Let's Connect</h2><p class="ssub">Have questions or want to partner with us? Our team is always ready to connect.</p></div>
+  <div class="cgrid">
+    <div class="cinfo">
+      <p>Whether you're looking to volunteer, donate, or collaborate, we'd love to hear from you and work together for Jammu &amp; Kashmir.</p>
+      <div class="citem"><div class="cic">📧</div><div><h4>Email</h4><p>unnatingo.jmu@gmail.com</p></div></div>
+      <div class="citem"><div class="cic">📞</div><div><h4>Phone / WhatsApp</h4><p>+91 94190 XXXXX</p></div></div>
+      <div class="citem"><div class="cic">📍</div><div><h4>Based In</h4><p>Jammu, Jammu &amp; Kashmir, India</p></div></div>
+      <div class="citem"><div class="cic">📸</div><div><h4>Instagram</h4><p>@unnatingo_jammu</p></div></div>
+    </div>
+    <div class="cform">
+      <h3>Send a Message</h3>
+      <div class="fgrow"><div class="fg"><label>Your Name *</label><input type="text" id="cn" placeholder="Full Name"></div><div class="fg"><label>Phone / Email *</label><input type="text" id="cc" placeholder="Phone or Email"></div></div>
+      <div class="fg"><label>Subject</label><select id="csu"><option>General Enquiry</option><option>Volunteering</option><option>Donation / CSR</option><option>Partnership</option><option>Media / Press</option></select></div>
+      <div class="fg"><label>Message *</label><textarea id="cm" placeholder="Your message..." style="min-height:108px;"></textarea></div>
+      <button class="bsub" onclick="subCon()">Send Message ✉</button>
+      <div class="sbox" id="cs">✅ Message sent! We'll get back to you within 24 hours.</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Ready to Make a Difference?</h2>
+  <p>Your support helps us serve more meals, educate more children, and run impactful drives across Jammu.</p>
+  <div class="ctabtns"><a href="#donate" class="bwh">Donate Now ❤</a><a href="#volunteer" class="bwho">Become a Volunteer</a></div>
+</div>
+
+<footer>
+  <div class="ftg">
+    <div class="ftb"><a class="logo" href="#home"><div class="lmark">P</div><div><span class="lname" style="color:#fff;">Unnati Charitable Trust</span><span class="lsub" style="color:rgba(255,255,255,.4);">Jammu &amp; Kashmir</span></div></a><p>Serving Humanity | Empowering Youth | Supporting Communities in Jammu, J&amp;K</p>
+      <div class="ftsoc"><a class="fts" href="#">📸</a><a class="fts" href="#">📘</a><a class="fts" href="#">💬</a><a class="fts" href="#">▶</a></div>
+    </div>
+    <div class="ftc"><h4>Quick Links</h4><a href="#about">About Us</a><a href="#programs">Our Programs</a><a href="#gallery">Gallery</a><a href="#volunteer">Volunteer</a></div>
+    <div class="ftc"><h4>Get Involved</h4><a href="#donate">Donate Now</a><a href="#volunteer">Become Volunteer</a><a href="#contact">Contact Us</a><a href="#upcoming">Upcoming Drives</a></div>
+    <div class="ftc"><h4>Contact</h4><p>📧 unnatingo.jmu@gmail.com</p><p>📞 +91 99999999</p><p>📍 Jammu, J&amp;K, India</p></div>
+  </div>
+  <div class="ftbot"><p>© 2025 Unnati Charitable Trust — Jammu. All rights reserved. Made with ❤ for the community.</p><p>Registered NGO | Jammu &amp; Kashmir</p></div>
+</footer>
+
+<script>
+function selA(b){document.querySelectorAll('.abtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('ca').value='';}
+function subVol(){const n=document.getElementById('vn').value,p=document.getElementById('vp').value;if(!n||!p){alert('Please fill name and phone.');return;}
+  const vs=JSON.parse(localStorage.getItem('tp_volunteers')||'[]');
+  vs.push({id:'VOL-'+Date.now(),name:n,phone:p,email:document.getElementById('ve').value,city:document.getElementById('vc').value,interest:document.getElementById('vi').value,msg:document.getElementById('vm').value,date:new Date().toLocaleDateString('en-IN'),status:'Active'});
+  localStorage.setItem('tp_volunteers',JSON.stringify(vs));
+  const s=document.getElementById('vs');s.style.display='block';setTimeout(()=>s.style.display='none',5000);}
+function subCon(){const n=document.getElementById('cn').value,c=document.getElementById('cc').value,m=document.getElementById('cm').value;if(!n||!c||!m){alert('Please fill all required fields.');return;}
+  const s=document.getElementById('cs');s.style.display='block';setTimeout(()=>s.style.display='none',5000);}
+
+function loadGallery(){
+  const saved=JSON.parse(localStorage.getItem('tp_gallery')||'[]');
+  const defaults=[{emoji:'🍱',label:'Food Drive 2025',bg:'#e8f5ec'},{emoji:'🧥',label:'Clothing Drive',bg:'#fff3e8'},{emoji:'📚',label:'Education Drive',bg:'#e8f0ff'},{emoji:'🎉',label:"Children's Day",bg:'#fff0f5'},{emoji:'🌱',label:'Tree Plantation',bg:'#f0ffe8'},{emoji:'🤝',label:'Community Event',bg:'#fff8e0'}];
+  const items=saved.length?saved:defaults;
+  const grid=document.getElementById('galGrid');grid.innerHTML='';
+  items.slice(0,6).forEach((item,i)=>{
+    const d=document.createElement('div');d.className='gi'+(i===1?' tall':'');
+    if(item.dataUrl){d.innerHTML=`<img src="${item.dataUrl}" alt="${item.label||''}"><div class="gov">${item.label||'Event Photo'}</div>`;}
+    else{d.style.background=item.bg||'#e8f5ec';d.innerHTML=`<div class="gem">${item.emoji}</div><div class="gov">${item.label}</div>`;}
+    grid.appendChild(d);
+  });
+}
+function loadActivities(){
+  const saved=JSON.parse(localStorage.getItem('tp_activities')||'[]');
+  const defaults=[
+    {tag:'FOOD',emoji:'🍱',bg:'#e8f5ec',title:'Breakfast Distribution Drive',date:'Mar 15, 2025',location:'Jammu City',volunteers:'45',impact:'550+ plates served'},
+    {tag:'CLOTHING',emoji:'🧥',bg:'#fff3e8',title:'Winter Clothing Collection',date:'Jan 10, 2025',location:'Multiple Locations',volunteers:'28',impact:'480+ clothes distributed'},
+    {tag:'EDUCATION',emoji:'📚',bg:'#e8f0ff',title:'Education Kit Distribution',date:'Dec 25, 2024',location:'Govt. Schools',volunteers:'20',impact:'180+ students helped'}];
+  const items=saved.length?saved:defaults;
+  const grid=document.getElementById('actGrid');grid.innerHTML='';
+  items.slice(0,6).forEach(item=>{
+    const d=document.createElement('div');d.className='acard';
+    const img=item.dataUrl?`<img src="${item.dataUrl}" alt="${item.title}">`:`<span class="aef">${item.emoji||'📸'}</span>`;
+    d.innerHTML=`<div class="aimg" style="background:${item.bg||'#e8f5ec'}">${img}<span class="atag">${item.tag||'EVENT'}</span></div>
+    <div class="abody"><h3>${item.title}</h3><div class="ameta"><span>📅 ${item.date}</span><span>📍 ${item.location}</span><span>👥 ${item.volunteers} volunteers</span></div><div class="aimp">Impact: ${item.impact}</div></div>`;
+    grid.appendChild(d);
+  });
+}
+document.addEventListener('DOMContentLoaded',()=>{loadGallery();loadActivities();});
+document.querySelectorAll('a[href^="#"]').forEach(l=>l.addEventListener('click',e=>{const t=document.querySelector(l.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}));
+</script>
+</body>
+</html>
