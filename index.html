@@ -366,45 +366,7 @@ footer{background:#0a1f10;color:rgba(255,255,255,.6);padding:52px 5% 26px;}
   </div>
   <div class="ftbot"><p>© 2019 Unnati Charitable Trust .All rights reserved. Made with ❤ for the community.</p><p>Registered NGO </p></div>
 </footer>.
-function selA(b){document.querySelectorAll('.abtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('ca').value='';}
-function subVol(){const n=document.getElementById('vn').value,p=document.getElementById('vp').value;if(!n||!p){alert('Please fill name and phone.');return;}
-  const vs=JSON.parse(localStorage.getItem('tp_volunteers')||'[]');
-  vs.push({id:'VOL-'+Date.now(),name:n,phone:p,email:document.getElementById('ve').value,city:document.getElementById('vc').value,interest:document.getElementById('vi').value,msg:document.getElementById('vm').value,date:new Date().toLocaleDateString('en-IN'),status:'Active'});
-  localStorage.setItem('tp_volunteers',JSON.stringify(vs));
-  const s=document.getElementById('vs');s.style.display='block';setTimeout(()=>s.style.display='none',5000);}
-function subCon(){const n=document.getElementById('cn').value,c=document.getElementById('cc').value,m=document.getElementById('cm').value;if(!n||!c||!m){alert('Please fill all required fields.');return;}
-  const s=document.getElementById('cs');s.style.display='block';setTimeout(()=>s.style.display='none',5000);}
 
-function loadGallery(){
-  const saved=JSON.parse(localStorage.getItem('tp_gallery')||'[]');
-  const defaults=[{emoji:'🍱',label:'Food Drive 2025',bg:'#e8f5ec'},{emoji:'🧥',label:'Clothing Drive',bg:'#fff3e8'},{emoji:'📚',label:'Education Drive',bg:'#e8f0ff'},{emoji:'🎉',label:"Children's Day",bg:'#fff0f5'},{emoji:'🌱',label:'Tree Plantation',bg:'#f0ffe8'},{emoji:'🤝',label:'Community Event',bg:'#fff8e0'}];
-  const items=saved.length?saved:defaults;
-  const grid=document.getElementById('galGrid');grid.innerHTML='';
-  items.slice(0,6).forEach((item,i)=>{
-    const d=document.createElement('div');d.className='gi'+(i===1?' tall':'');
-    if(item.dataUrl){d.innerHTML=`<img src="${item.dataUrl}" alt="${item.label||''}"><div class="gov">${item.label||'Event Photo'}</div>`;}
-    else{d.style.background=item.bg||'#e8f5ec';d.innerHTML=`<div class="gem">${item.emoji}</div><div class="gov">${item.label}</div>`;}
-    grid.appendChild(d);
-  });
-}
-function loadActivities(){
-  const saved=JSON.parse(localStorage.getItem('tp_activities')||'[]');
-  const defaults=[
-    {tag:'FOOD',emoji:'🍱',bg:'#e8f5ec',title:'Breakfast Distribution Drive',date:'Mar 15, 2025',location:'Jammu City',volunteers:'45',impact:'550+ plates served'},
-    {tag:'CLOTHING',emoji:'🧥',bg:'#fff3e8',title:'Winter Clothing Collection',date:'Jan 10, 2025',location:'Multiple Locations',volunteers:'28',impact:'480+ clothes distributed'},
-    {tag:'EDUCATION',emoji:'📚',bg:'#e8f0ff',title:'Education Kit Distribution',date:'Dec 25, 2024',location:'Govt. Schools',volunteers:'20',impact:'180+ students helped'}];
-  const items=saved.length?saved:defaults;
-  const grid=document.getElementById('actGrid');grid.innerHTML='';
-  items.slice(0,6).forEach(item=>{
-    const d=document.createElement('div');d.className='acard';
-    const img=item.dataUrl?`<img src="${item.dataUrl}" alt="${item.title}">`:`<span class="aef">${item.emoji||'📸'}</span>`;
-    d.innerHTML=`<div class="aimg" style="background:${item.bg||'#e8f5ec'}">${img}<span class="atag">${item.tag||'EVENT'}</span></div>
-    <div class="abody"><h3>${item.title}</h3><div class="ameta"><span>📅 ${item.date}</span><span>📍 ${item.location}</span><span>👥 ${item.volunteers} volunteers</span></div><div class="aimp">Impact: ${item.impact}</div></div>`;
-    grid.appendChild(d);
-  });
-}
-document.addEventListener('DOMContentLoaded',()=>{loadGallery();loadActivities();});
-document.querySelectorAll('a[href^="#"]').forEach(l=>l.addEventListener('click',e=>{const t=document.querySelector(l.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}));
 </script>
 </body>
 </html>
